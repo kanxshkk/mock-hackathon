@@ -23,4 +23,4 @@ def nearest_neighbor(distances_matrix, start_point):
     # Create the path with the node names ("r0", "n0", "n1", ..., "r0")
     path = [start_point] + ["n" + str(node) for node in visited] + [start_point]
 
-    return {"path": path, "total_distance": total_distance}
+    return path
