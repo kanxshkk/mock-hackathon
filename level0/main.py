@@ -16,3 +16,11 @@ for row in distances_matrix:
 from near_n import *
 result = nearest_neighbor(distances_matrix, "r0")
 print(result)
+output_data = {"v0": {"path": result}}
+
+# Write the result to a JSON file
+output_file_path = "level0_output.json"
+with open(output_file_path, 'w') as output_file:
+    json.dump(output_data, output_file, indent=2)
+
+print(f"Result written to {output_file_path}")
